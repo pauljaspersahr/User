@@ -1,0 +1,47 @@
+{
+    "python.pythonPath": "C:\\Python311\\python.exe",
+    "dev.containers.executeInWSL": true,
+    "vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "k"],
+         "after": ["<esc>"]
+     }
+    ],
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["<Space>", "s", "h"],
+        "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+        "before": ["<Space>", "s", "v"],
+        "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+        "before": ["<Space>", "s", "x"],
+        "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+        "before": ["<Space>", "f", "m"],
+        "commands": ["editor.action.formatDocument"]
+    }
+    ],
+    "vim.handleKeys": {
+        "<C-n>": false,
+    },
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "workbench.colorCustomizations": {},
+    "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true
+},
+"editor.formatOnSave": false,
+"[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+
+}
