@@ -6,23 +6,51 @@
          "after": ["<esc>"]
      }
     ],
-    "vim.leader": "<Space>",
-    "vim.normalModeKeyBindingsNonRecursive": [
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
-        "before": ["<Space>", "s", "h"],
-        "commands": ["workbench.action.splitEditorDown"]
+      "before": ["<Space>", "s", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
     },
     {
-        "before": ["<Space>", "s", "v"],
-        "commands": ["workbench.action.splitEditorRight"]
+      "before": ["<Space>", "s", "v"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
     },
     {
-        "before": ["<Space>", "s", "x"],
-        "commands": ["workbench.action.closeActiveEditor"]
+      "before": ["<space>", "s", "c"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
     },
     {
-        "before": ["<Space>", "f", "m"],
-        "commands": ["editor.action.formatDocument"]
+      "before": ["<Space>", "s", "h"],
+      "commands": ["workbench.action.moveEditorToLeftGroup"]
+    },
+    {
+      "before": ["<Space>", "s", "j"],
+      "commands": ["workbench.action.moveEditorToBelowGroup"]
+    },
+    {
+      "before": ["<Space>", "s", "k"],
+      "commands": ["workbench.action.moveEditorToAboveGroup"]
+    },
+    {
+      "before": ["<Space>", "s", "l"],
+      "commands": ["workbench.action.moveEditorToRightGroup"]
+    },
+    {
+      "before": ["<Space>", "s", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<Space>", "f", "m"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<esc>", "<esc>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<Space>", "r", "n"],
+      "commands": ["editor.action.rename"]
     }
     ],
     "vim.normalModeKeyBindings": [
