@@ -1,11 +1,11 @@
 {
-    "dev.containers.executeInWSL": true,
-    "vim.insertModeKeyBindings": [
-     {
-         "before": ["j", "k"],
-         "after": ["<esc>"]
-     }
-    ],
+  "dev.containers.executeInWSL": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -19,6 +19,14 @@
     {
       "before": ["<space>", "s", "c"],
       "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["<space>", "s", "s"],
+      "commands": [
+        "workbench.action.newGroupRight",
+        "workbench.action.focusPreviousGroup",
+        "workbench.action.moveEditorToNextGroup"
+      ]
     },
     {
       "before": ["<Space>", "s", "h"],
@@ -41,6 +49,19 @@
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
+      "before": ["<Space>", "s", "e"],
+      "commands": ["workbench.action.evenEditorWidths"]
+    },
+    {
+      "before": ["<Space>", "s", "m"],
+      "commands": ["workbench.action.toggleMaximizeEditorGroup"],
+      "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+    },
+    {
+      "before": ["<Space>", "s", "w"],
+      "commands": ["workbench.action.closeEditorsInGroup"]
+    },
+    {
       "before": ["<Space>", "f", "m"],
       "commands": ["editor.action.formatDocument"]
     },
@@ -52,78 +73,86 @@
       "before": ["<Space>", "r", "n"],
       "commands": ["editor.action.rename"]
     }
-    ],
-    "vim.normalModeKeyBindings": [
+  ],
+  "vim.normalModeKeyBindings": [
     {
-        "before": ["g", "h"],
-        "commands": ["C_Cpp.SwitchHeaderSource"],
-        "when": "editorTextFocus && vim.active && vim.mode == 'Normal' && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/"
-    },
-    {
-        "before": ["leader", "r", "n"],
-        "commands": ["editor.action.rename"]
+      "before": ["g", "h"],
+      "commands": ["C_Cpp.SwitchHeaderSource"],
+      "when": "editorTextFocus && vim.active && vim.mode == 'Normal' && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/"
     },
     {
-        "before": ["<Tab>", "<Tab>"],
-        "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"],
-        "when": "vim.mode == 'Normal' && !activeEditorGroupEmpty"
+      "before": ["leader", "r", "n"],
+      "commands": ["editor.action.rename"]
     },
     {
-        "key": ["g", "d"],
-        "command": ["editor.action.revealDefinition"],
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+      "before": ["<Tab>", "<Tab>"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ],
+      "when": "vim.mode == 'Normal' && !activeEditorGroupEmpty"
     },
     {
-        "key": ["g" , "D"],
-        "command": ["editor.action.revealDeclaration"]
+      "key": ["g", "d"],
+      "command": ["editor.action.revealDefinition"],
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": ["g", "r"],
-        "command": ["editor.action.goToReferences"],
-        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+      "key": ["g", "D"],
+      "command": ["editor.action.revealDeclaration"]
     },
-    ],
-    "vim.handleKeys": {
-        "<C-n>": false,
-    },
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "workbench.colorCustomizations": {},
-    "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8",
-    "editor.formatOnSave": true
-},
-"editor.formatOnSave": true,
-"[jsonc]": {
+    {
+      "key": ["g", "r"],
+      "command": ["editor.action.goToReferences"],
+      "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-n>": false
+  },
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "workbench.colorCustomizations": {},
+  "editor.minimap.enabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"editor.minimap.enabled": false,
-"[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-},
-"cmake.configureOnOpen": true,
-"cmake.options.statusBarVisibility": "compact",
-"cmake.showOptionsMovedNotification": false,
-"editor.inlayHints.padding": true,
-"C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
-"C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
-"C_Cpp.inlayHints.parameterNames.enabled": true,
-"C_Cpp.inlayHints.referenceOperator.enabled": true,
-"C_Cpp.inlayHints.referenceOperator.showSpace": true,
-"editor.lineDecorationsWidth": 5,
-"editor.padding.top": 10,
-"editor.folding": false,
-"editor.glyphMargin": true,
-"editor.scrollbar.horizontal": "hidden",
-"editor.scrollbar.vertical": "hidden",
-"zenMode.hideLineNumbers": false,
-"search.showLineNumbers": true,
-"editor.lineNumbers": "relative",
-"zenMode.hideStatusBar": false,
-"zenMode.showTabs": "single",
-"workbench.editor.empty.hint": "hidden",
-"explorer.confirmDelete": false
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "cmake.configureOnOpen": true,
+  "cmake.options.statusBarVisibility": "compact",
+  "cmake.showOptionsMovedNotification": false,
+  "editor.inlayHints.padding": true,
+  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+  "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+  "editor.lineDecorationsWidth": 5,
+  "editor.padding.top": 10,
+  "editor.folding": false,
+  "editor.glyphMargin": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "zenMode.hideLineNumbers": false,
+  "search.showLineNumbers": true,
+  "editor.lineNumbers": "relative",
+  "zenMode.hideStatusBar": false,
+  "zenMode.showTabs": "single",
+  "workbench.editor.empty.hint": "hidden",
+  "explorer.confirmDelete": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.formatOnSave": true,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.codeLens.enabled": false,
+  "editor.codeLens": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
 }
