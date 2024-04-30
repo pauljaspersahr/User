@@ -2,26 +2,53 @@
   "dev.containers.executeInWSL": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
-      "after": ["<esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<esc>"
+      ]
     }
   ],
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<Space>", "s", "h"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "before": [
+        "<Space>",
+        "s",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
     },
     {
-      "before": ["<Space>", "s", "v"],
-      "commands": ["workbench.action.moveEditorToNextGroup"]
+      "before": [
+        "<Space>",
+        "s",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToNextGroup"
+      ]
     },
     {
-      "before": ["<space>", "s", "c"],
-      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+      "before": [
+        "<space>",
+        "s",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToPreviousGroup"
+      ]
     },
     {
-      "before": ["<space>", "s", "s"],
+      "before": [
+        "<space>",
+        "s",
+        "s"
+      ],
       "commands": [
         "workbench.action.newGroupRight",
         "workbench.action.focusPreviousGroup",
@@ -29,82 +56,175 @@
       ]
     },
     {
-      "before": ["<Space>", "s", "h"],
-      "commands": ["workbench.action.moveEditorToLeftGroup"]
+      "before": [
+        "<Space>",
+        "s",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToLeftGroup"
+      ]
     },
     {
-      "before": ["<Space>", "s", "j"],
-      "commands": ["workbench.action.moveEditorToBelowGroup"]
+      "before": [
+        "<Space>",
+        "s",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToBelowGroup"
+      ]
     },
     {
-      "before": ["<Space>", "s", "k"],
-      "commands": ["workbench.action.moveEditorToAboveGroup"]
+      "before": [
+        "<Space>",
+        "s",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToAboveGroup"
+      ]
     },
     {
-      "before": ["<Space>", "s", "l"],
-      "commands": ["workbench.action.moveEditorToRightGroup"]
+      "before": [
+        "<Space>",
+        "s",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToRightGroup"
+      ]
     },
     {
-      "before": ["<Space>", "s", "x"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<Space>",
+        "s",
+        "x"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     {
-      "before": ["<Space>", "s", "e"],
-      "commands": ["workbench.action.evenEditorWidths"]
+      "before": [
+        "<Space>",
+        "q",
+        "q"
+      ],
+      "command": [
+        "workbench.action.closeEditorsAndGroup"
+      ]
     },
     {
-      "before": ["<Space>", "s", "m"],
-      "commands": ["workbench.action.toggleMaximizeEditorGroup"],
+      "before": [
+        "<Space>",
+        "s",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.evenEditorWidths"
+      ]
+    },
+    {
+      "before": [
+        "<Space>",
+        "s",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.toggleMaximizeEditorGroup"
+      ],
       "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
     },
     {
-      "before": ["<Space>", "s", "w"],
-      "commands": ["workbench.action.closeEditorsInGroup"]
+      "before": [
+        "<Space>",
+        "s",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInGroup"
+      ]
     },
     {
-      "before": ["<Space>", "f", "m"],
-      "commands": ["editor.action.formatDocument"]
+      "before": [
+        "<Space>",
+        "f",
+        "m"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
     },
     {
-      "before": ["<esc>", "<esc>"],
-      "commands": [":nohl"]
+      "before": [
+        "<esc>",
+        "<esc>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
     {
-      "before": ["<Space>", "r", "n"],
-      "commands": ["editor.action.rename"]
+      "before": [
+        "<Space>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
     }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["g", "h"],
-      "commands": ["C_Cpp.SwitchHeaderSource"],
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "C_Cpp.SwitchHeaderSource"
+      ],
       "when": "editorTextFocus && vim.active && vim.mode == 'Normal' && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/"
     },
     {
-      "before": ["leader", "r", "n"],
-      "commands": ["editor.action.rename"]
-    },
-    {
-      "before": ["<Tab>", "<Tab>"],
+      "before": [
+        "<Tab>",
+        "<Tab>"
+      ],
       "commands": [
         "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
       ],
       "when": "vim.mode == 'Normal' && !activeEditorGroupEmpty"
     },
     {
-      "key": ["g", "d"],
-      "command": ["editor.action.revealDefinition"],
-      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ],
+      "when": "editorHasDefinitionProvider && editorTextFocus"
     },
     {
-      "key": ["g", "D"],
-      "command": ["editor.action.revealDeclaration"]
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        "editor.action.revealDeclaration"
+      ]
     },
     {
-      "key": ["g", "r"],
-      "command": ["editor.action.goToReferences"],
-      "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-    }
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
   ],
   "vim.handleKeys": {
     "<C-n>": false
@@ -114,13 +234,14 @@
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "workbench.colorCustomizations": {},
   "editor.minimap.enabled": false,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.autopep8",
+    // "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -142,7 +263,6 @@
   "editor.scrollbar.vertical": "hidden",
   "zenMode.hideLineNumbers": false,
   "search.showLineNumbers": true,
-  "editor.lineNumbers": "relative",
   "zenMode.hideStatusBar": false,
   "zenMode.showTabs": "single",
   "workbench.editor.empty.hint": "hidden",
@@ -154,5 +274,49 @@
   "editor.codeLens": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "workbench.colorCustomizations": {
+    // "terminal.background": "#000000",
+    // "terminal.foreground": "#ABB2BF",
+    "terminalCursor.background": "#ABB2BF",
+    "terminalCursor.foreground": "#ABB2BF",
+    "terminal.ansiBlack": "#282C34",
+    "terminal.ansiBlue": "#61AFEF",
+    "terminal.ansiBrightBlack": "#545862",
+    "terminal.ansiBrightBlue": "#61AFEF",
+    "terminal.ansiBrightCyan": "#56B6C2",
+    "terminal.ansiBrightGreen": "#98C379",
+    "terminal.ansiBrightMagenta": "#C678DD",
+    "terminal.ansiBrightRed": "#E06C75",
+    "terminal.ansiBrightWhite": "#C8CCD4",
+    "terminal.ansiBrightYellow": "#E5C07B",
+    "terminal.ansiCyan": "#56B6C2",
+    "terminal.ansiGreen": "#98C379",
+    "terminal.ansiMagenta": "#C678DD",
+    "terminal.ansiRed": "#E06C75",
+    "terminal.ansiWhite": "#ABB2BF",
+    "terminal.ansiYellow": "#E5C07B"
+  },
+  "zenMode.fullScreen": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "debug.onTaskErrors": "abort",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.foldfix": true,
+  "vim.highlightedyank.duration": 400,
+  "gitlens.views.workspaces.showIncomingActivity": true,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "vim.smartRelativeLine": true,
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "'MesloLGL Nerd Font Mono Regular'",
+  "vim.highlightedyank.color": "rgba(250, 250, 170, 0.7)",
+  "autopep8.path": [
+    "/usr/local/bin/autopep8"
+  ],
 }

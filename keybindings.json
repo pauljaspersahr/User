@@ -39,13 +39,11 @@
     "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
   },
-
   {
     "key": "f12",
     "command": "-editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
-
   {
     "key": "shift+f12",
     "command": "-editor.action.goToReferences",
@@ -60,5 +58,13 @@
     "key": "ctrl+k z",
     "command": "-workbench.action.toggleZenMode",
     "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "-workbench.action.toggleAuxiliaryBar"
   }
 ]
