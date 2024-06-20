@@ -347,14 +347,14 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "files.associations": {
-      "*.css": "tailwindcss"
-    },
-    "editor.quickSuggestions": {
-      "strings": true,
-    },
-    "zenMode.hideStatusBar": false,
-    "window.commandCenter": false,
-    "eslint.experimental.useFlatConfig": true,
-  }
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true,
+  },
+  "zenMode.hideStatusBar": false,
+  "window.commandCenter": false,
+  "eslint.experimental.useFlatConfig": true,
 }
