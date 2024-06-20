@@ -81,5 +81,9 @@
     "key": "ctrl+n",
     "command": "workbench.action.closeSidebar",
     "when": "searchViewletVisible && searchViewletFocus"
+  },
+  {
+    "key": "f12",
+    "command": "workbench.action.toggleMenuBar"
   }
 ]
