@@ -66,5 +66,20 @@
   {
     "key": "ctrl+alt+b",
     "command": "-workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "search.focus.nextInputBox",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "list.focusUp",
+    "when": "searchViewletVisible && searchViewletFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.closeSidebar",
+    "when": "searchViewletVisible && searchViewletFocus"
   }
 ]

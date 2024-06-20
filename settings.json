@@ -225,6 +225,26 @@
         "references-view.findReferences"
       ]
     },
+    {
+      "before": [
+        "<Space>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<Space>",
+        "f",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
   ],
   "vim.handleKeys": {
     "<C-n>": false
@@ -314,9 +334,23 @@
   },
   "vim.smartRelativeLine": true,
   "editor.lineNumbers": "relative",
-  "editor.fontFamily": "'MesloLGL Nerd Font Mono Regular'",
+  "editor.fontFamily": "Hack Nerd Font Mono",
   "vim.highlightedyank.color": "rgba(250, 250, 170, 0.7)",
   "autopep8.path": [
     "/usr/local/bin/autopep8"
   ],
+  "workbench.iconTheme": "vscode-icons",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }
