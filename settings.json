@@ -213,7 +213,7 @@
         "D"
       ],
       "commands": [
-        "editor.action.revealDeclaration"
+        "editor.action.peekDefinition"
       ]
     },
     {
@@ -357,4 +357,7 @@
   "zenMode.hideStatusBar": false,
   "window.commandCenter": false,
   "eslint.experimental.useFlatConfig": true,
+  "zenMode.centerLayout": false,
+  "window.title": "${dirty}${remoteName}${separator}${rootNameShort}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+  "window.menuBarVisibility": "compact",
 }
