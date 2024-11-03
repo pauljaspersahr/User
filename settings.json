@@ -9,7 +9,17 @@
       "after": [
         "<esc>"
       ]
-    }
+    },
+    {
+      "before": [
+        "<ctrl>",
+        "<Space>",
+      ],
+      "commands": [
+        "editor.action.triggerSuggest"
+      ],
+      "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
   ],
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -360,4 +370,5 @@
   "zenMode.centerLayout": false,
   "window.title": "${dirty}${remoteName}${separator}${rootNameShort}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
   "window.menuBarVisibility": "compact",
+  "workbench.sideBar.location": "right"
 }
