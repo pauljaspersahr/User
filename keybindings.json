@@ -92,11 +92,6 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
   },
   {
-    "key": "down",
-    "command": "-selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
@@ -107,18 +102,8 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
   },
   {
-    "key": "down",
-    "command": "-notebook.focusNextEditor",
-    "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
-  },
-  {
     "key": "ctrl+j",
     "command": "quickInput.next",
-    "when": "inQuickInput && quickInputType == 'quickPick'"
-  },
-  {
-    "key": "down",
-    "command": "-quickInput.next",
     "when": "inQuickInput && quickInputType == 'quickPick'"
   },
   {
@@ -127,12 +112,27 @@
     "when": "inQuickInput && quickInputType == 'quickPick'"
   },
   {
-    "key": "up",
-    "command": "-quickInput.previous",
-    "when": "inQuickInput && quickInputType == 'quickPick'"
-  },
-  {
     "key": "f3",
     "command": "workbench.action.toggleCenteredLayout"
-  }
+  },
+  {
+    "key": "h",
+    "command": "editor.action.scrollLeftHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "editor.action.scrollRightHover",
+    "when": "editorHoverFocused"
+  },
 ]
