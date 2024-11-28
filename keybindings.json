@@ -2,7 +2,7 @@
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus || explorerViewletFocus"
   },
   {
     "key": "ctrl+l",
@@ -134,5 +134,20 @@
     "key": "l",
     "command": "editor.action.scrollRightHover",
     "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "-list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
   },
 ]
